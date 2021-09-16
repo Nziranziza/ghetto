@@ -1,16 +1,60 @@
-# Instructions
+## Description
 
-## How to create a Pull Request
+Description of PR that completes issue here...
 
-* Change your PR description to preview mode, [see here](https://prnt.sc/1l7ew1l)
+## Changes
 
-* Using back-end template
+- Item 1
+- Item 2
+- Item 3
 
-   1. Copy and paste this at the of your current tab url, [see here](https://prnt.sc/1l7gwgn)
+## Requests / Responses
 
-      ```bash
-        &template=backend.md
-      ```
-   2. Refresh and your PR description will be filled with a new PR template for the back-end, fill it and hit create button
+**Request**
 
-* Using front-end template, coming soon...
+POST `/api/users` Returns a list of users
+
+```
+{
+  "data": {
+    "attributes": {
+      "name": "The Dude",
+      "email": "thedudeabides@wee.net",
+      "password": "hellopassword"
+    }
+  },
+  "type": "users"
+}
+```
+
+**Response**
+
+HTTP/1.1 200 OK
+
+```
+{
+  "data": {
+    "type": "users",
+    "id": "4",
+    "attributes": {
+      "name": "The Dude",
+      "email": "thedudeabides@wee.net",
+      "last-logged-in": null,
+      "created-at": "2016-10-20T17:45:08.190Z",
+      "updated-at": "2016-10-20T17:45:08.190Z"
+    },
+    "links": {
+      "self": "/users/4"
+    }
+  }
+}
+```
+
+## Testing
+
+Describe how this should be tested manually
+
+## What are the relevant issues?
+
+Finishes #issue_number
+
